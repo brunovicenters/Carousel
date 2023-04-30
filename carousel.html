@@ -8,43 +8,41 @@
     <title>Carousel</title>
   </head>
   <body>
-    <div class="container">
-      <h2 id="c1">Carousel 1</h2>
-      <input type="radio" name="slider" id="item-1" checked />
-      <input type="radio" name="slider" id="item-2" />
-      <input type="radio" name="slider" id="item-3" />
-      <div class="cards">
-        <label class="card" for="item-1" id="song-1">
-          <img src="assets/banhoLoja.png" alt="song" />
-        </label>
-        <label class="card" for="item-2" id="song-2">
-          <img src="assets/frenteLoja.jpg" alt="song" />
-        </label>
-        <label class="card" for="item-3" id="song-3">
-          <img src="assets/interiorLoja.webp" alt="song" />
-        </label>
+    <div id="carousel">
+      <div class="container">
+        <h2 id="c1">Carousel 1</h2>
+        <input type="radio" name="slider" id="item-1" checked />
+        <input type="radio" name="slider" id="item-2" />
+        <input type="radio" name="slider" id="item-3" />
+        <div class="cards">
+          <label class="card" for="item-1" id="song-1">
+            <img src="assets/banhoLoja.png" alt="song" />
+          </label>
+          <label class="card" for="item-2" id="song-2">
+            <img src="assets/frenteLoja.jpg" alt="song" />
+          </label>
+          <label class="card" for="item-3" id="song-3">
+            <img src="assets/interiorLoja.webp" alt="song" />
+          </label>
+        </div>
       </div>
     </div>
     <!-- ********************************** -->
-    <div>
-      <h2 id="c2">Carousel 2</h2>
-      <ul class="slider">
-        <li>
-          <input type="radio" id="slide1" name="slide" checked />
-          <label for="slide1"></label>
-          <img src="assets/banhoLoja.png" />
-        </li>
-        <li>
-          <input type="radio" id="slide2" name="slide" />
-          <label for="slide2"></label>
-          <img src="assets/banhoLoja.png " />
-        </li>
-        <li>
-          <input type="radio" id="slide3" name="slide" />
-          <label for="slide3"></label>
-          <img src="assets/interiorLoja.webp" />
-        </li>
-      </ul>
+    <h2 id="c2">Carousel 2</h2>
+    <div class="slider">
+      <div class="wrapper">
+        <div class="slider-holder">
+          <div id="slider-image-1"></div>
+          <div id="slider-image-2"></div>
+          <div id="slider-image-3"></div>
+        </div>
+      </div>
+      <div class="button-holder">
+        <a href="#slider-image-1" class="dots"></a>
+        <a href="#slider-image-2" class="dots"></a>
+        <a href="#slider-image-3" class="dots"></a>
+      </div>
     </div>
+    <div></div>
   </body>
 </html>
