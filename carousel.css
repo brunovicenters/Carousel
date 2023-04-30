@@ -13,10 +13,13 @@ body {
   font-family: "DM Sans", sans-serif;
   background-color: #8eb8de;
   transition: background 0.4s ease-in;
+}
+
+#carousel {
+  width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .container {
@@ -101,58 +104,87 @@ img {
 }
 
 .slider {
-  display: block;
-  height: 293px;
-  width: 600px;
-  margin: auto;
-  margin-top: 20px;
   position: relative;
 }
 
-.slider li {
-  list-style: none;
-  position: absolute;
-}
-
-.slider img {
-  margin: auto;
-  height: 100%;
+.slider .wrapper {
   width: 100%;
-  vertical-align: top;
-  opacity: 0;
-  visibility: hidden;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.slider input {
-  display: none;
+.slider .slider-holder {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  height: 100%;
+  animation: slide 15s ease infinite;
 }
 
-.slider label {
-  background-color: #000;
-  border-radius: 50%;
-  bottom: 10px;
-  cursor: pointer;
-  display: block;
-  height: 10px;
+.slider #slider-image-1 {
+  background-color: yellow;
+  background-image: url(assets/frenteLoja.jpg);
+  background-size: cover;
+}
+
+.slider #slider-image-2 {
+  background-color: red;
+  background-image: url(assets/banhoLoja.png);
+  background-size: cover;
+}
+
+.slider #slider-image-3 {
+  background-color: green;
+  background-image: url(assets/interiorLoja.webp);
+  background-size: cover;
+}
+
+.slider .button-holder {
   position: absolute;
-  width: 10px;
-  z-index: 10;
+  bottom: 0%;
+  left: 45%;
 }
 
-.slider li:nth-child(1) label {
-  left: 40%;
+.slider .button-holder .dots {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: brown;
+  margin: 0.4rem 0.3rem;
 }
 
-.slider li:nth-child(2) label {
-  left: 49%;
-}
-
-.slider li:nth-child(3) label {
-  right: 40%;
-}
-
-.slider li input:checked ~ img {
-  opacity: 1;
-  visibility: visible;
-  z-index: 10;
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  10% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(0%);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-200%);
+  }
+  90% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
